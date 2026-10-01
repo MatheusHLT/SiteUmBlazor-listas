@@ -1,0 +1,39 @@
+@page "/placar"
+@rendermode InteractiveServer
+
+<h1>PLACAR ATUAL</h1>
+
+<p>
+    <h2>Pontuação do placar: @pontoAtual</h2>
+</p>
+
+<button @onclick="somarPlacar">Somar 1 Ponto</button>
+<button @onclick="subtrairPlacar">Subtrair 1 Ponto</button>
+<button @onclick="zerarPlacar">Zerar Placar</button>
+
+@code {
+    private int pontoAtual = 0;
+
+    private void zerarPlacar()
+    {
+        pontoAtual = 0;
+    }
+
+    private void somarPlacar()
+    {
+        pontoAtual++;
+    }
+    private void subtrairPlacar()
+    {
+        if (pontoAtual <=[] 0)
+        {
+            pontoAtual = 0;
+
+        }
+        else
+        {
+            pontoAtual--;
+        }
+    }
+
+}
